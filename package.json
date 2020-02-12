@@ -4,7 +4,10 @@
   "description": "API test project",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require @babel/register --recursive"
+    "test": "cross-env TEST_ENV=docker mocha --require @babel/register --recursive",
+    "test:dev": "cross-env TEST_ENV=dev mocha --require @babel/register --recursive",
+    "test:stage": "cross-env TEST_ENV=stage mocha --require @babel/register --recursive",
+    "test:prod": "cross-env TEST_ENV=prod mocha --require @babel/register --recursive"
   },
   "keywords": [],
   "author": "Peter Zsilak",
@@ -12,10 +15,15 @@
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
-    "@babel/node": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
-    "@babel/register": "^7.8.3",
     "chai": "^4.2.0",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.8.0",
     "mocha": "^7.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "log4js": "^6.1.0"
   }
 }
