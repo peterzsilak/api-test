@@ -11,13 +11,12 @@ describe('API Test Suite', () => {
         logger.debug('Setup ready.');
     });
 
-    describe('User endpoint', async () => {
+    describe('Test case', async () => {
 
-        it('should response with user data', () => {
+        it('should use the right environment', () => {
             let str = 'Hello guys!';
-            logger.debug('Request: ' + `${config.onboxBaseUrl}` +`:`+ `${config.onboxPort}`);
-            logger.debug('Response: ');
-            expect(str).equals('Hello guys!');
+            logger.debug('Request: ' + `${config.baseUrl}` +`:`+ `${config.port}`);
+            logger.debug('Response: ...');
         });
 
     });

@@ -1,8 +1,6 @@
 module.exports = {
     logLevel: `debug`,
 
-    onboxBaseUrl: `http://dev.onbox.hu`,
-    onboxPort: 8484,
-    storageBaseUrl: `http://dev.onbox.hu`,
-    storagePort: 8585
+    baseUrl: `http://dev.example.com`,
+    port: 8484
 };
